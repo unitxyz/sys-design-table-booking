@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Roboto Slab', ui-serif, Georgia, serif;
+
+  --color-background: #faf9f7;
+  --color-foreground: #1c1917;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #1c1917;
+
+  --color-muted: #f5f5f4;
+  --color-muted-foreground: #78716c;
+
+  --color-primary: #d97706;
+  --color-primary-foreground: #ffffff;
+
+  --color-border: #e7e5e4;
+
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-success: #16a34a;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 0.25rem;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
+}
